@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sensasi Rasa • Pusat Jajanan & Minuman Kekinian</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    
+    /* Latar Belakang Motif Batik Doodle Makanan & Minuman Uncolored (Line Art Outline) */
+    .food-doodle-bg {
+      background-color: #f5f3ff;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%238b5cf6' stroke-opacity='0.15' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 30 L40 10 L50 35 Z M25 25 A 3 3 0 1 0 28 28' /%3E%3Crect x='80' y='15' width='20' height='25' rx='3'/%3E%3Cpath d='M85 15 L88 5 L95 5'/%3E%3Cpath d='M80 23 L100 23'/%3E%3Ccircle cx='30' cy='85' r='14'/%3E%3Ccircle cx='30' cy='85' r='5'/%3E%3Cpath d='M22 78 Q 30 73 38 78'/%3E%3Cpath d='M75 75 L105 75 L95 100 Z'/%3E%3Ccircle cx='85' cy='82' r='2'/%3E%3Ccircle cx='93' cy='88' r='2.5'/%3E%3Cpath d='M55 45 Q 60 35 65 45 L60 65 Z'/%3E%3Cpath d='M55 52 L65 52'/%3E%3Crect x='10' y='50' width='16' height='18' rx='2'/%3E%3Cpath d='M26 54 A 4 4 0 0 1 26 62'/%3E%3Ccircle cx='105' cy='45' r='7'/%3E%3Cpath d='M98 45 L93 40 M98 45 L93 50 M112 45 L117 40 M112 45 L117 50'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    /* Pattern Line-Art Khusus Banner Hero */
+    .hero-doodle-pattern {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cg fill='none' stroke='%237c3aed' stroke-opacity='0.22' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M25 20 L35 70 A 5 5 0 0 0 45 75 L55 75 A 5 5 0 0 0 65 70 L75 20 Z'/%3E%3Cpath d='M20 20 L80 20'/%3E%3Cpath d='M50 20 L60 5'/%3E%3Ccircle cx='40' cy='55' r='3'/%3E%3Ccircle cx='50' cy='62' r='3'/%3E%3Ccircle cx='60' cy='55' r='3'/%3E%3Cpath d='M90 20 L135 40 L100 80 Z'/%3E%3Ccircle cx='108' cy='42' r='4'/%3E%3Ccircle cx='115' cy='58' r='3'/%3E%3Cpath d='M15 95 C 15 85 45 85 45 95 C 45 105 15 105 15 95 Z'/%3E%3Cpath d='M23 90 L27 100 M33 90 L37 100'/%3E%3Cpath d='M80 100 Q 105 85 130 100'/%3E%3Crect x='80' y='105' width='50' height='12' rx='3'/%3E%3Cpath d='M85 122 Q 105 132 125 122'/%3E%3C/g%3E%3C/svg%3E");
+    }
+  </style>
+</head>
+<body class="food-doodle-bg text-slate-800 min-h-screen flex flex-col antialiased selection:bg-purple-300 selection:text-purple-950">
+
+  <!-- TOPBAR SOSMED -->
+  <div class="bg-gradient-to-r from-purple-900 via-indigo-950 to-purple-900 text-purple-100 text-xs py-2.5 px-4 sticky top-0 z-30 font-medium border-b border-purple-700/40 shadow-sm">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center space-x-2">
+        <span class="inline-block w-2.5 h-2.5 rounded-full bg-pink-400 animate-ping"></span>
+        <span class="font-semibold text-purple-200">✨ Selamat datang di Sensasi Rasa! Nikmati kelezatan menu favoritmu!</span>
+      </div>
+      <div class="flex items-center space-x-5 font-bold text-[11px]">
+        <a id="link-wa-top" href="#" target="_blank" class="hover:text-pink-300 transition flex items-center gap-1.5 bg-purple-800/60 px-2.5 py-1 rounded-full border border-purple-600/50">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-emerald-400"></i> <span>WhatsApp Admin</span>
+        </a>
+        <a id="link-ig-top" href="#" target="_blank" class="hover:text-pink-300 transition flex items-center gap-1.5 bg-purple-800/60 px-2.5 py-1 rounded-full border border-purple-600/50">
+          <i data-lucide="instagram" class="w-3.5 h-3.5 text-pink-400"></i> <span>Instagram</span>
+        </a>
+        <a id="link-tiktok-top" href="#" target="_blank" class="hover:text-pink-300 transition flex items-center gap-1.5 bg-purple-800/60 px-2.5 py-1 rounded-full border border-purple-600/50">
+          <i data-lucide="video" class="w-3.5 h-3.5 text-cyan-400"></i> <span>TikTok</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR UTAMA -->
+  <header class="bg-white/90 backdrop-blur-md border-b border-purple-200/80 sticky top-[37px] z-20 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 py-3.5 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-purple-600 via-pink-500 to-indigo-600 flex items-center justify-center text-white text-2xl shadow-lg shadow-purple-300">
+          🧁
+        </div>
+        <div>
+          <h1 id="shop-title" class="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-900 via-indigo-900 to-pink-600 tracking-tight leading-none">
+            Sensasi Rasa
+          </h1>
+          <p class="text-[11px] text-purple-600 font-bold mt-1 tracking-wider uppercase">Pusat Jajanan & Minuman Kekinian</p>
+        </div>
+      </div>
+
+      <button onclick="toggleCart()" class="relative px-4 py-2.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded-2xl transition flex items-center gap-2 font-bold text-xs shadow-md shadow-purple-300 group">
+        <i data-lucide="shopping-bag" class="w-4 h-4 group-hover:scale-110 transition-transform"></i>
+        <span>Keranjang Belanjaan</span>
+        <span id="cart-count" class="bg-pink-500 text-white text-[11px] font-extrabold rounded-full px-2 py-0.5 shadow-sm">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO BANNER SENSASI RASA -->
+  <main class="max-w-7xl mx-auto px-4 py-6 flex-1 w-full space-y-8">
+    <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-purple-200/90 via-purple-100/95 to-pink-100/90 border border-purple-300/80 p-6 md:p-10 shadow-xl shadow-purple-200/60 hero-doodle-pattern">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+        
+        <!-- TEKS HERO KIRI -->
+        <div class="lg:col-span-7 space-y-5">
+          <span class="px-3.5 py-1.5 bg-white/90 border border-purple-300 text-purple-900 text-xs font-extrabold rounded-full uppercase tracking-wider inline-flex items-center gap-1.5 shadow-sm">
+            ✨ SPESIALIS JAJANAN & MINUMAN FAVORIT
+          </span>
+          <h2 class="text-3xl md:text-5xl font-black text-purple-950 tracking-tight leading-tight">
+            Sensasi Jajan <br>
+            Bikin Ketagihan Cuma Di <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-pink-600 to-indigo-600">Sensasi Rasa!</span>
+          </h2>
+          
+          <p class="text-purple-900/90 text-sm md:text-base font-medium leading-relaxed max-w-xl bg-white/70 backdrop-blur-sm p-3.5 rounded-2xl border border-purple-200/60 shadow-sm">
+            Dibuat dari bahan premium terbaik dengan kombinasi rasa pilihan yang siap menemani setiap momen bahagiamu! Pilih favoritmu dan pesan instan via WhatsApp. 👇
+          </p>
+
+          <div class="pt-1 flex flex-wrap gap-3">
+            <a id="btn-wa-hero" href="#" target="_blank" class="px-5 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl text-xs font-extrabold flex items-center gap-2 transition shadow-lg shadow-emerald-200 hover:-translate-y-0.5">
+              <i data-lucide="message-circle" class="w-4 h-4"></i> Pesan via WhatsApp
+            </a>
+            <a id="btn-ig-hero" href="#" target="_blank" class="px-4 py-3 bg-white/90 border border-purple-300 text-purple-900 hover:bg-purple-50 rounded-2xl text-xs font-bold flex items-center gap-2 transition shadow-sm hover:-translate-y-0.5">
+              <i data-lucide="instagram" class="w-4 h-4 text-pink-500"></i> Follow Instagram
+            </a>
+            <a id="btn-tiktok-hero" href="#" target="_blank" class="px-4 py-3 bg-white/90 border border-purple-300 text-purple-900 hover:bg-purple-50 rounded-2xl text-xs font-bold flex items-center gap-2 transition shadow-sm hover:-translate-y-0.5">
+              <i data-lucide="video" class="w-4 h-4 text-cyan-500"></i> TikTok Official
+            </a>
+          </div>
+        </div>
+
+        <!-- HERO CAROUSEL BERGERAK OTOMATIS DARI MENU SPREADSHEET KAMU -->
+        <div class="lg:col-span-5 relative">
+          <div class="bg-white/85 backdrop-blur-md border border-purple-300/80 rounded-3xl p-4 shadow-2xl">
+            <div id="hero-carousel-container" class="relative overflow-hidden rounded-2xl min-h-[260px] flex items-center justify-center bg-purple-50/50">
+              <div id="hero-loading" class="text-xs font-bold text-purple-600 animate-pulse">
+                ⏳ Memuat menu bergerak...
+              </div>
+              <div id="hero-carousel-slides" class="flex transition-transform duration-700 ease-out w-full hidden">
+                <!-- Foto menu bergerak otomatis murni dari Google Sheet kamu -->
+              </div>
+            </div>
+
+            <!-- Titik Indikator Slideshow -->
+            <div id="hero-carousel-dots" class="flex justify-center gap-2 mt-4"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- FILTER KATEGORI & PENCARIAN -->
+    <div class="flex flex-col md:flex-row gap-4 justify-between items-center bg-white/80 backdrop-blur p-4 rounded-2xl border border-purple-200/80 shadow-sm">
+      <div class="flex flex-wrap gap-2" id="category-pills">
+        <button onclick="filterCategory('all')" class="px-4 py-2 rounded-xl text-xs font-bold bg-gradient-to-r from-purple-700 to-indigo-700 text-white shadow-sm transition hover:opacity-90">✨ Semua Menu</button>
+        <button onclick="filterCategory('makanan')" class="px-4 py-2 rounded-xl text-xs font-bold bg-purple-100/80 text-purple-900 border border-purple-200 hover:bg-purple-200 transition">🍕 Makanan & Snack</button>
+        <button onclick="filterCategory('minuman')" class="px-4 py-2 rounded-xl text-xs font-bold bg-purple-100/80 text-purple-900 border border-purple-200 hover:bg-purple-200 transition">🥤 Minuman Segar</button>
+      </div>
+
+      <div class="relative w-full md:w-80">
+        <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-purple-500"></i>
+        <input type="text" id="search-input" oninput="filterProducts()" placeholder="Cari menu favoritmu..." class="w-full bg-purple-50/60 border border-purple-200 rounded-xl pl-10 pr-4 py-2.5 text-xs text-purple-950 placeholder-purple-400 focus:outline-none focus:border-purple-600 shadow-inner">
+      </div>
+    </div>
+
+    <!-- KATALOG PRODUK BESAR -->
+    <div id="product-loading" class="text-center py-20 text-purple-700">
+      <div class="inline-block animate-spin text-4xl mb-3">🌀</div>
+      <p class="text-sm font-bold">Memuat katalog Sensasi Rasa dari Google Sheet...</p>
+    </div>
+
+    <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 hidden"></div>
+  </main>
+
+  <!-- FOOTER WEBSITE -->
+  <footer class="bg-white/95 border-t border-purple-200/80 py-10 mt-16 text-purple-900/80 text-xs">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <div class="flex items-center gap-2 mb-3">
+          <span class="text-2xl">🧁</span>
+          <h3 class="text-base font-black text-purple-950">Sensasi Rasa</h3>
+        </div>
+        <p class="text-purple-800/80 leading-relaxed font-medium">
+          Menyajikan aneka makanan dan minuman kekinian berkualitas tinggi dengan cita rasa spesial dan menggugah selera.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-sm font-extrabold text-purple-950 mb-3">Ikuti Social Media Kami</h3>
+        <div class="space-y-2.5 font-bold">
+          <p><a id="link-wa-footer" href="#" target="_blank" class="hover:text-emerald-600 transition flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4 text-emerald-500"></i> WhatsApp Admin</a></p>
+          <p><a id="link-ig-footer" href="#" target="_blank" class="hover:text-pink-600 transition flex items-center gap-2"><i data-lucide="instagram" class="w-4 h-4 text-pink-500"></i> Instagram Official</a></p>
+          <p><a id="link-tiktok-footer" href="#" target="_blank" class="hover:text-cyan-600 transition flex items-center gap-2"><i data-lucide="video" class="w-4 h-4 text-cyan-500"></i> TikTok Official</a></p>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-sm font-extrabold text-purple-950 mb-3">Cara Pemesanan</h3>
+        <p class="text-purple-800/80 leading-relaxed font-medium">
+          Pilih menu kesukaanmu, klik tombol <strong>Keranjang Belanjaan</strong>, lalu klik kirim pesanan untuk konfirmasi via WhatsApp Admin secara otomatis.
+        </p>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 border-t border-purple-100 mt-8 pt-6 text-center text-purple-600 font-semibold">
+      <p>© 2026 Sensasi Rasa. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- MODAL DRAWER KERANJANG -->
+  <div id="cart-modal" class="fixed inset-0 bg-purple-950/50 backdrop-blur-sm z-50 hidden flex justify-end">
+    <div class="bg-white w-full max-w-md h-full flex flex-col p-6 shadow-2xl">
+      <div class="flex justify-between items-center pb-4 border-b border-purple-100">
+        <h4 class="text-lg font-extrabold text-purple-950 flex items-center gap-2"><i data-lucide="shopping-bag" class="text-purple-600"></i> Keranjang Belanjaan</h4>
+        <button onclick="toggleCart()" class="text-purple-400 hover:text-purple-900 text-2xl font-bold">&times;</button>
+      </div>
+
+      <div id="cart-items" class="flex-1 py-4 space-y-3 overflow-y-auto"></div>
+
+      <div class="border-t border-purple-100 pt-4 space-y-4">
+        <div class="flex justify-between text-base font-extrabold text-purple-950">
+          <span>Total Pembayaran:</span>
+          <span id="cart-total" class="text-purple-700 text-lg">Rp 0</span>
+        </div>
+
+        <form id="checkout-form" onsubmit="handleCheckout(event)" class="space-y-3">
+          <div>
+            <label class="block text-xs font-bold text-purple-950 mb-1">Nama Pemesan</label>
+            <input type="text" id="cust-name" required class="w-full bg-purple-50/50 border border-purple-200 rounded-xl px-3.5 py-2.5 text-xs text-purple-950 focus:outline-none focus:border-purple-600" placeholder="Contoh: Budi">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-purple-950 mb-1">Nomor WhatsApp</label>
+            <input type="tel" id="cust-phone" required class="w-full bg-purple-50/50 border border-purple-200 rounded-xl px-3.5 py-2.5 text-xs text-purple-950 focus:outline-none focus:border-purple-600" placeholder="Contoh: 081234567890">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-purple-950 mb-1">Alamat Pengiriman</label>
+            <textarea id="cust-address" required class="w-full bg-purple-50/50 border border-purple-200 rounded-xl px-3.5 py-2.5 text-xs text-purple-950 focus:outline-none focus:border-purple-600" rows="2" placeholder="Nama Jalan, Kelurahan, Kecamatan..."></textarea>
+          </div>
+          <button type="submit" id="btn-submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold py-3 rounded-2xl transition text-xs shadow-lg shadow-emerald-200 flex justify-center items-center gap-2">
+            <i data-lucide="send" class="w-4 h-4"></i> Pesan Sekarang via WhatsApp
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT & KONFIGURASI LINK APPS SCRIPT -->
+  <script>
+    const CONFIG = {
+      namaToko: "Sensasi Rasa",
+      apiUrl: "https://script.google.com/macros/s/AKfycbwpEmdVmI1pkKkpgZff1lnmkEdwO4us24hk8Geqvmc0QsXODYcCYevruLpD9a_1tBMA/exec",
+      waAdmin: "6287810239458",
+      instagram: "https://www.instagram.com/_.tymel04?dlrf=ZzQ1cDhmcDFiM3hk",
+      tiktok: "https://www.tiktok.com/@k3tawainajaa?_r=1&_t=ZS-9Ak2Bk1b1bc"
+    };
+
+    let products = [];
+    let cart = [];
+    let currentHeroSlide = 0;
+    let heroInterval;
+
+    function initConfig() {
+      const waUrl = `https://wa.me/${CONFIG.waAdmin}`;
+      const setLink = (id, url) => {
+        const el = document.getElementById(id);
+        if(el) el.href = url;
+      };
+      setLink("link-wa-top", waUrl);
+      setLink("link-ig-top", CONFIG.instagram);
+      setLink("link-tiktok-top", CONFIG.tiktok);
+
+      setLink("btn-wa-hero", waUrl);
+      setLink("btn-ig-hero", CONFIG.instagram);
+      setLink("btn-tiktok-hero", CONFIG.tiktok);
+
+      setLink("link-wa-footer", waUrl);
+      setLink("link-ig-footer", CONFIG.instagram);
+      setLink("link-tiktok-footer", CONFIG.tiktok);
+    }
+
+    async function loadProducts() {
+      try {
+        const res = await fetch(CONFIG.apiUrl);
+        const json = await res.json();
+        products = json.data || [];
+        renderProducts(products);
+        initHeroCarousel(products); // Gunakan data produk asli untuk carousel bergerak
+      } catch (err) {
+        document.getElementById("product-loading").innerHTML = `<p class='text-red-500 font-bold text-xs'>Gagal memuat katalog produk dari Google Sheet.</p>`;
+      }
+    }
+
+    // CAROUSEL BERGERAK MURNI DARI FOTO MENU GOOGLE SHEET KAMU (TANPA HARGA & RATING)
+    function initHeroCarousel(items) {
+      if (!items || items.length === 0) return;
+      const container = document.getElementById("hero-carousel-slides");
+      const dotsContainer = document.getElementById("hero-carousel-dots");
+      container.innerHTML = "";
+      dotsContainer.innerHTML = "";
+
+      const featured = items.slice(0, 5); // Ambil 5 produk teratas milik kamu
+
+      featured.forEach((item, idx) => {
+        container.innerHTML += `
+          <div class="w-full flex-shrink-0 flex flex-col items-center justify-center p-2 text-center">
+            <div class="relative w-full h-52 rounded-2xl overflow-hidden shadow-md border border-purple-200 bg-purple-100">
+              <img src="${item.foto || 'https://via.placeholder.com/400?text=Sensasi+Rasa'}" class="w-full h-full object-cover" alt="${item.nama}" onerror="this.src='https://via.placeholder.com/400?text=Sensasi+Rasa'">
+            </div>
+            <div class="mt-3 space-y-0.5">
+              <span class="text-[10px] font-black bg-purple-200 text-purple-900 px-3 py-1 rounded-full uppercase tracking-wider">${item.kategori || 'Menu Utama'}</span>
+              <h4 class="font-black text-purple-950 text-base mt-1">${item.nama}</h4>
+            </div>
+          </div>
+        `;
+
+        dotsContainer.innerHTML += `
+          <button onclick="goToHeroSlide(${idx}, ${featured.length})" class="w-2.5 h-2.5 rounded-full transition-all ${idx === 0 ? 'bg-purple-700 w-6' : 'bg-purple-300'}" id="hero-dot-${idx}"></button>
+        `;
+      });
+
+      document.getElementById("hero-loading").classList.add("hidden");
+      container.classList.remove("hidden");
+
+      startHeroAutoPlay(featured.length);
+    }
+
+    function startHeroAutoPlay(total) {
+      if(heroInterval) clearInterval(heroInterval);
+      heroInterval = setInterval(() => {
+        currentHeroSlide = (currentHeroSlide + 1) % total;
+        updateHeroCarouselUI(total);
+      }, 3000); // Berganti otomatis setiap 3 detik
+    }
+
+    function goToHeroSlide(idx, total) {
+      currentHeroSlide = idx;
+      updateHeroCarouselUI(total);
+    }
+
+    function updateHeroCarouselUI(total) {
+      const container = document.getElementById("hero-carousel-slides");
+      if(container) {
+        container.style.transform = `translateX(-${currentHeroSlide * 100}%)`;
+      }
+      for(let i = 0; i < total; i++) {
+        const dot = document.getElementById(`hero-dot-${i}`);
+        if(dot) {
+          if(i === currentHeroSlide) {
+            dot.className = "w-6 h-2.5 rounded-full bg-purple-700 transition-all";
+          } else {
+            dot.className = "w-2.5 h-2.5 rounded-full bg-purple-300 transition-all";
+          }
+        }
+      }
+    }
+
+    function renderProducts(items) {
+      const grid = document.getElementById("product-grid");
+      grid.innerHTML = "";
+
+      if(items.length === 0) {
+        grid.innerHTML = `<p class="col-span-full text-center text-purple-400 font-bold py-10">Menu tidak ditemukan.</p>`;
+      } else {
+        items.forEach(p => {
+          grid.innerHTML += `
+            <div class="bg-white border border-purple-200/90 rounded-3xl overflow-hidden hover:shadow-xl hover:border-purple-400 transition-all duration-300 flex flex-col group">
+              <div class="relative h-56 sm:h-64 bg-purple-50 overflow-hidden">
+                <img src="${p.foto || 'https://via.placeholder.com/400?text=Sensasi+Rasa'}" class="h-full w-full object-cover group-hover:scale-105 transition duration-500" alt="${p.nama}" onerror="this.src='https://via.placeholder.com/400?text=Sensasi+Rasa'">
+                <span class="absolute top-3 left-3 text-[10px] font-black bg-white/95 text-purple-900 px-3 py-1 rounded-full shadow-md uppercase tracking-wider">
+                  ✨ ${p.kategori || 'Menu'}
+                </span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                <div>
+                  <h4 class="font-black text-purple-950 text-base group-hover:text-purple-700 transition">${p.nama}</h4>
+                  <p class="text-xs text-purple-800/70 mt-1 line-clamp-2 leading-relaxed">${p.deskripsi || ''}</p>
+                  <p class="text-[11px] text-purple-500 mt-2 font-medium">Stok: <span class="font-bold text-purple-800">${p.stok || 0}</span></p>
+                </div>
+                <div class="pt-3 border-t border-purple-100 flex flex-col sm:flex-row gap-2 sm:items-center justify-between">
+                  <div>
+                    <span class="text-[10px] text-purple-500 block font-bold">Harga</span>
+                    <span class="font-extrabold text-purple-900 text-base">Rp ${Number(p.harga || 0).toLocaleString("id-ID")}</span>
+                  </div>
+                  <button onclick="addToCart(${p.id})" class="bg-gradient-to-r from-purple-700 to-indigo-700 hover:from-purple-800 hover:to-indigo-800 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition flex items-center justify-center gap-1.5 shadow-md shadow-purple-200">
+                    <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i> Keranjang Belanjaan
+                  </button>
+                </div>
+              </div>
+            </div>
+          `;
+        });
+      }
+
+      document.getElementById("product-loading").classList.add("hidden");
+      grid.classList.remove("hidden");
+      lucide.createIcons();
+    }
+
+    function filterCategory(cat) {
+      if(cat === 'all') { renderProducts(products); }
+      else {
+        const filtered = products.filter(p => (p.kategori && p.kategori.toLowerCase().includes(cat)) || p.nama.toLowerCase().includes(cat));
+        renderProducts(filtered);
+      }
+    }
+
+    function filterProducts() {
+      const query = document.getElementById("search-input").value.toLowerCase();
+      const filtered = products.filter(p => p.nama.toLowerCase().includes(query) || (p.kategori && p.kategori.toLowerCase().includes(query)));
+      renderProducts(filtered);
+    }
+
+    function addToCart(id) {
+      const prod = products.find(p => p.id == id);
+      const exist = cart.find(item => item.id == id);
+      if (exist) { exist.qty += 1; } else { cart.push({ ...prod, qty: 1 }); }
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      document.getElementById("cart-count").innerText = cart.reduce((acc, i) => acc + i.qty, 0);
+      const container = document.getElementById("cart-items");
+      container.innerHTML = "";
+      let total = 0;
+
+      cart.forEach((item, idx) => {
+        total += item.harga * item.qty;
+        container.innerHTML += `
+          <div class="flex justify-between items-center bg-purple-50/70 p-3 rounded-2xl border border-purple-100 text-xs">
+            <div>
+              <p class="font-bold text-purple-950">${item.nama}</p>
+              <p class="text-purple-700 font-semibold mt-0.5">Rp ${Number(item.harga).toLocaleString("id-ID")} x ${item.qty}</p>
+            </div>
+            <button onclick="cart.splice(${idx}, 1); updateCartUI()" class="text-red-500 hover:text-red-700 text-xs font-bold">Hapus</button>
+          </div>
+        `;
+      });
+      document.getElementById("cart-total").innerText = "Rp " + total.toLocaleString("id-ID");
+    }
+
+    function toggleCart() {
+      document.getElementById("cart-modal").classList.toggle("hidden");
+    }
+
+    async function handleCheckout(e) {
+      e.preventDefault();
+      if (cart.length === 0) return alert("Keranjang belanjaan Anda masih kosong!");
+
+      const btn = document.getElementById("btn-submit");
+      btn.innerText = "Mencatat Pesanan...";
+      btn.disabled = true;
+
+      const invoiceCode = "SR-" + Date.now().toString().slice(-6);
+      const payload = {
+        nama: document.getElementById("cust-name").value,
+        whatsapp: document.getElementById("cust-phone").value,
+        alamat: document.getElementById("cust-address").value,
+        items: cart,
+        total: cart.reduce((acc, i) => acc + (i.harga * i.qty), 0)
+      };
+
+      try {
+        fetch(CONFIG.apiUrl, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "text/plain" },
+          body: JSON.stringify(payload)
+        });
+
+        let textWA = `Halo Admin *Sensasi Rasa*, saya mau order dong! 🧁\n\n`;
+        textWA += `🧾 *Invoice:* ${invoiceCode}\n`;
+        textWA += `👤 *Nama:* ${payload.nama}\n`;
+        textWA += `📱 *No. WA:* ${payload.whatsapp}\n`;
+        textWA += `📍 *Alamat:* ${payload.alamat}\n\n`;
+        textWA += `🛒 *Detail Pesanan:*\n`;
+        payload.items.forEach(i => {
+          textWA += `• ${i.nama} (${i.qty}x) = Rp ${(i.harga * i.qty).toLocaleString("id-ID")}\n`;
+        });
+        textWA += `\n💰 *Total Pembayaran: Rp ${payload.total.toLocaleString("id-ID")}*\n\n`;
+        textWA += `Mohon info nomor rekening dan total ongkirnya ya. Terima kasih!`;
+
+        window.open(`https://wa.me/${CONFIG.waAdmin}?text=${encodeURIComponent(textWA)}`, "_blank");
+
+        cart = [];
+        updateCartUI();
+        toggleCart();
+        e.target.reset();
+      } catch (err) {
+        alert("Gagal mengirim pesanan.");
+      } finally {
+        btn.innerText = "Pesan Sekarang via WhatsApp";
+        btn.disabled = false;
+      }
+    }
+
+    initConfig();
+    loadProducts();
+    lucide.createIcons();
+  </script>
+</body>
+</html>
